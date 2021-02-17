@@ -1,31 +1,12 @@
 import React from "react";
-import React, { useState, useEffect } from "react";
-import * as API from "./utils/API";
+import EmployeeDetail from "./components/employeeDetail";
+// import React, { useState, useEffect } from "react";
+// import * as API from "./utils/API";
 
 // IMPORT individual components
 
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
+function App() {
+  return <EmployeeDetail />;
+}
 
 export default App;
