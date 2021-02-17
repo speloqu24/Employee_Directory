@@ -1,12 +1,8 @@
 import React from "react";
-import EmployeeDetail from "./components/employeeDetail";
-// import React, { useState, useEffect } from "react";
-// import * as API from "./utils/API";
-
-// IMPORT individual components
+import EmployeeList from "./components/employeeDetail";
 
 function App() {
-  return <EmployeeDetail />;
+  return <EmployeeList />;
 }
 
 export default App;
