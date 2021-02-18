@@ -37,6 +37,13 @@ function EmployeeList() {
     setFilterEmployees(result);
   };
 
+  // TODO: what is up with the SORT?! research
+  const handleSort = () => {
+    employees.sort((a, b) => (a.name.first > b.name.first ? 1 : -1));
+    console.log(employees);
+    setFilterEmployees(employees);
+  };
+
   return (
     <>
       <div>
