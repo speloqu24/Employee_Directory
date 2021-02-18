@@ -25,13 +25,18 @@ function EmployeeList() {
     // filter through employees array here
     const result = employees.filter(
       (employee) =>
+        // FILTER by first name
         employee.name.first
           .toLowerCase()
           .startsWith(event.target.value.toLowerCase()) ||
+        // FILTER by last name
         employee.name.last
           .toLowerCase()
           .startsWith(event.target.value.toLowerCase()) ||
-        employee.phone.startsWith(event.target.value)
+        // FILTER by phone
+        employee.phone.startsWith(event.target.value) ||
+        // FILTER by email
+        employee.email.startsWith(event.target.value)
     );
 
     setFilterEmployees(result);
