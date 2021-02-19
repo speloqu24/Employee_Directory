@@ -1,5 +1,6 @@
 import React from "react";
 
+// SEARCH field/form
 function SearchEmployee(props) {
   return (
     <form>

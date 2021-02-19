@@ -63,7 +63,7 @@ function EmployeeList() {
         <thead>
           <tr>
             <th scope="col"></th>
-            <th scope="col" onClick={() => handleSort()}>
+            <th scope="col" onClick={handleSort}>
               Name
             </th>
             <th scope="col">Phone</th>
