@@ -9,7 +9,6 @@ function SearchEmployee(props) {
         name="search"
         type="text"
         placeholder="Search"
-        class=""
       />
     </form>
   );

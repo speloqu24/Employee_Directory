@@ -19,33 +19,28 @@ function EmployeeList() {
   const handleInputChange = (event) => {
     setSearch(event.target.value);
 
-    // FILTER
+    // FILTER by firstname, lastname, phone & email.
     const result = employees.filter(
       (employee) =>
-        // firstname
         employee.name.first
           .toLowerCase()
           .startsWith(event.target.value.toLowerCase()) ||
-        // lastname
         employee.name.last
           .toLowerCase()
           .startsWith(event.target.value.toLowerCase()) ||
-        // phone
         employee.phone.startsWith(event.target.value) ||
-        // email
         employee.email.startsWith(event.target.value)
     );
 
     setFilterEmployees(result);
   };
 
-  // TODO: what is up with the SORT?! research
+  // SORT by first name
   const handleSort = () => {
-    const sort = employees.sort((a, b) =>
+    const employeesSort = employees.sort((a, b) =>
       a.name.first > b.name.first ? 1 : -1
     );
-    setFilterEmployees(sort);
-    console.log(filterEmployees);
+    setFilterEmployees([...employeesSort]);
   };
 
   return (
@@ -64,7 +59,7 @@ function EmployeeList() {
           />
         </div>
       </div>
-      <table className="table">
+      <table className="table table-striped">
         <thead>
           <tr>
             <th scope="col"></th>
