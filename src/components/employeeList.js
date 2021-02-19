@@ -19,20 +19,20 @@ function EmployeeList() {
   const handleInputChange = (event) => {
     setSearch(event.target.value);
 
-    // FILTER through employees array
+    // FILTER
     const result = employees.filter(
       (employee) =>
-        // FILTER by first name
+        // firstname
         employee.name.first
           .toLowerCase()
           .startsWith(event.target.value.toLowerCase()) ||
-        // FILTER by last name
+        // lastname
         employee.name.last
           .toLowerCase()
           .startsWith(event.target.value.toLowerCase()) ||
-        // FILTER by phone
+        // phone
         employee.phone.startsWith(event.target.value) ||
-        // FILTER by email
+        // email
         employee.email.startsWith(event.target.value)
     );
 
@@ -50,8 +50,19 @@ function EmployeeList() {
 
   return (
     <>
-      <div>
-        <SearchEmployee handleInputChange={handleInputChange} search={search} />
+      <div
+        className="jumbotron jumbotron-fluid"
+        style={{ backgroundColor: "black" }}
+      >
+        <div className="container">
+          <h1 className="display-4" style={{ color: "white" }}>
+            Employee Directory
+          </h1>
+          <SearchEmployee
+            handleInputChange={handleInputChange}
+            search={search}
+          />
+        </div>
       </div>
       <table className="table">
         <thead>
@@ -66,7 +77,6 @@ function EmployeeList() {
           </tr>
         </thead>
         <tbody>
-          {/* {console.log(filterEmployees)} */}
           {filterEmployees.map((employee) => (
             <tr key={employee.login.uuid}>
               <td>
@@ -79,7 +89,7 @@ function EmployeeList() {
 
               <td>{employee.email}</td>
 
-              <td>{employee.dob.date}</td>
+              <td>{employee.dob.date.slice(0, 10)}</td>
             </tr>
           ))}
         </tbody>
