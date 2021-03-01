@@ -2,8 +2,7 @@
 
 Created By: Samantha Peloquin
 
-> Deployed Application: https://zen-volhard-4c8149.netlify.app/
-
+> Deployed Application: https://employee-directory-srp.netlify.app
 ## Table of Contents
 
 - [Project Description](#description)
